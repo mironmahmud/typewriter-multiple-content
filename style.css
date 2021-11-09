@@ -1,0 +1,49 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    outline: 0px;
+}
+
+body {
+    height: 100vh;
+    font-family: 'Lato', sans-serif;
+    background: linear-gradient(#AA076B, #61045F);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 75px;
+    font-weight: 900;
+    color: #ffffff;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.type-text {
+    color: #fff96a;
+}
+
+.type-cursor {
+    position: relative;
+}
+
+.type-cursor::before {
+    position: absolute;
+    content: '';
+    top: 0px;
+    right: -5px;
+    width: 3px;
+    height: 100%;
+    background: #ffffff;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0% { background: #ffffff; }
+    49% { background: #ffffff; }
+    50% { background: transparent; }
+    99% { background: transparent; }
+    100% { background: #ffffff; }
+}
